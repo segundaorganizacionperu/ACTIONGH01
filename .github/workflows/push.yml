@@ -21,4 +21,4 @@ jobs:
               uses: docker/build-push-action@v5
               with:
                 push: true
-                tags: rguerrerogo/firstaction-reiniciowindows:${{github.sha}}
+                tags: rguerreropiuraperu/firstaction-reiniciowindows:${{github.sha}}
