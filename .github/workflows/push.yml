@@ -1,7 +1,10 @@
 on:
-    push:
-        branches:
-           - master
+    workflow_dispatch:
+      inputs:
+        repositorio:
+          description: 'Nombre del repositorio'
+          required: true
+
 name: CD
 jobs:
     docker:
