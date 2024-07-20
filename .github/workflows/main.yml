@@ -1,0 +1,36 @@
+name: Hello World
+
+on:
+  workflow_dispatch:
+    inputs:
+      repositorio:
+        description: 'Nombre del repositorio'
+        required: false
+        
+      state:
+        description: "var state"
+        required: false
+        
+      problemid:
+        description: "var problemid"
+        required: false
+      
+      problemtitle:
+        description: "var problemtitle"
+        required: false
+
+      problemdetailstext:
+        description: "var problemdetailtext"
+        required: false
+              
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: dynatrace_receive
+      run: |
+        echo "RECIBIENDO DE DYNATRACE,  
+        ${{ github.event.inputs.repositorio }}, 
+        ${{ github.event.inputs.state }}, 
+        ${{ github.event.inputs.problemid }},
+        ${{ github.event.inputs.problemtitle }}
